@@ -85,7 +85,7 @@
     { location: 'Grasslands' }) 
 // 2. Query for all bounties with a reward worth 10000 or more
    db.bounties.find(
-    { reward: { $gt: 9999 } })
+    { reward: { $gte: 10000 } }) // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< This one in ?
 // 3. Query for all bounties, but exclude the client attribute from being shown
    db.bounties.find(
     {captured: false},{client: 0})
